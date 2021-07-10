@@ -57,8 +57,6 @@ namespace QuanLyDuAn_K70
         {
             dtLaiLo.DataSource = getALLLaiLo("");
 
-
-
         }
 
 
