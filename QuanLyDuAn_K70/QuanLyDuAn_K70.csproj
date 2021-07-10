@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{180C3932-7CB5-4093-B8C7-168C0E859EEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDuAn_K70</RootNamespace>
+    <AssemblyName>QuanLyDuAn_K70</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\Admin\Desktop\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoPhanBLL.cs" />
+    <Compile Include="BoPhanDAL.cs" />
+    <Compile Include="ChiTiet_DA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_DA.Designer.cs">
+      <DependentUpon>ChiTiet_DA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_KH.Designer.cs">
+      <DependentUpon>ChiTiet_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_LaiLo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_LaiLo.Designer.cs">
+      <DependentUpon>ChiTiet_LaiLo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_NDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_NDA.Designer.cs">
+      <DependentUpon>ChiTiet_NDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_GiaTriNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_GiaTriNT.Designer.cs">
+      <DependentUpon>ChiTiet_GiaTriNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_SDDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_SDDK.Designer.cs">
+      <DependentUpon>ChiTiet_SDDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_NP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_NP.Designer.cs">
+      <DependentUpon>ChiTiet_NP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_Phi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_Phi.Designer.cs">
+      <DependentUpon>ChiTiet_Phi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_NV.Designer.cs">
+      <DependentUpon>ChiTiet_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_GD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_GD.Designer.cs">
+      <DependentUpon>ChiTiet_GD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DM_DuAn.cs" />
+    <Compile Include="DM_KhachHang.cs" />
+    <Compile Include="DM_GiaTriNT.cs" />
+    <Compile Include="DM_NhomDuAn.cs" />
+    <Compile Include="DM_SoDuDauKy.cs" />
+    <Compile Include="DM_NhapPhi.cs" />
+    <Compile Include="DM_Phi.cs" />
+    <Compile Include="DM_NhanVien.cs" />
+    <Compile Include="DM_GiaiDoan.cs" />
+    <Compile Include="ExportReport.cs" />
+    <Compile Include="ExportToExcel.cs" />
+    <Compile Include="FormLaiLo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaiLo.Designer.cs">
+      <DependentUpon>FormLaiLo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DA.Designer.cs">
+      <DependentUpon>Form_DA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KH.Designer.cs">
+      <DependentUpon>Form_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NDA.Designer.cs">
+      <DependentUpon>Form_NDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GiaTriNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GiaTriNT.Designer.cs">
+      <DependentUpon>Form_GiaTriNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SDDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SDDK.Designer.cs">
+      <DependentUpon>Form_SDDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NP.Designer.cs">
+      <DependentUpon>Form_NP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Phi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Phi.Designer.cs">
+      <DependentUpon>Form_Phi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NV.Designer.cs">
+      <DependentUpon>Form_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GD.Designer.cs">
+      <DependentUpon>Form_GD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuAnBLL.cs" />
+    <Compile Include="DuAnDAL.cs" />
+    <Compile Include="KhachHangDAL.cs" />
+    <Compile Include="KhachHangBLL.cs" />
+    <Compile Include="GiaTriNTDAL.cs" />
+    <Compile Include="GiaTriNTBLL.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhomDuAnDAL.cs" />
+    <Compile Include="NhomDuAnBLL.cs" />
+    <Compile Include="SoDuDauKyDAL.cs" />
+    <Compile Include="SoDuDauKyBLL.cs" />
+    <Compile Include="NhapPhiDAL.cs" />
+    <Compile Include="NhapPhiBLL.cs" />
+    <Compile Include="PhiBLL.cs" />
+    <Compile Include="PhiDAL.cs" />
+    <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="GiaiDoanDAL.cs" />
+    <Compile Include="GiaiDoanBLL.cs" />
+    <Compile Include="ChiNhanhBLL.cs" />
+    <Compile Include="ChiNhanhDAL.cs" />
+    <Compile Include="ChiTiet_CN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_CN.Designer.cs">
+      <DependentUpon>ChiTiet_CN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConnection.cs" />
+    <Compile Include="DM_BoPhan.cs" />
+    <Compile Include="DM_ChiNhanh.cs" />
+    <Compile Include="Form_BP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BP.Designer.cs">
+      <DependentUpon>Form_BP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet_BP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTiet_BP.Designer.cs">
+      <DependentUpon>ChiTiet_BP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CN.Designer.cs">
+      <DependentUpon>Form_CN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestExcel.cs" />
+    <Compile Include="Test_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_DangNhap.Designer.cs">
+      <DependentUpon>Test_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thuoctinh.cs" />
+    <EmbeddedResource Include="ChiTiet_DA.resx">
+      <DependentUpon>ChiTiet_DA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_KH.resx">
+      <DependentUpon>ChiTiet_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_LaiLo.resx">
+      <DependentUpon>ChiTiet_LaiLo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_NDA.resx">
+      <DependentUpon>ChiTiet_NDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_GiaTriNT.resx">
+      <DependentUpon>ChiTiet_GiaTriNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_SDDK.resx">
+      <DependentUpon>ChiTiet_SDDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_NP.resx">
+      <DependentUpon>ChiTiet_NP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_Phi.resx">
+      <DependentUpon>ChiTiet_Phi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_NV.resx">
+      <DependentUpon>ChiTiet_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_GD.resx">
+      <DependentUpon>ChiTiet_GD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_CN.resx">
+      <DependentUpon>ChiTiet_CN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaiLo.resx">
+      <DependentUpon>FormLaiLo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DA.resx">
+      <DependentUpon>Form_DA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KH.resx">
+      <DependentUpon>Form_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NDA.resx">
+      <DependentUpon>Form_NDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GiaTriNT.resx">
+      <DependentUpon>Form_GiaTriNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SDDK.resx">
+      <DependentUpon>Form_SDDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NP.resx">
+      <DependentUpon>Form_NP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Phi.resx">
+      <DependentUpon>Form_Phi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NV.resx">
+      <DependentUpon>Form_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GD.resx">
+      <DependentUpon>Form_GD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BP.resx">
+      <DependentUpon>Form_BP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTiet_BP.resx">
+      <DependentUpon>ChiTiet_BP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CN.resx">
+      <DependentUpon>Form_CN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Test_DangNhap.resx">
+      <DependentUpon>Test_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
