@@ -56,10 +56,18 @@ namespace QuanLyDuAn_K70
         public void ShowALLLaiLo()
         {
             dtLaiLo.DataSource = getALLLaiLo("");
+
+
+
         }
+
+
         private void FormLaiLo_Load(object sender, EventArgs e)
         {
             ShowALLLaiLo();
+
+
+
         }
 
         public DataTable FindTenDA(String duan)
